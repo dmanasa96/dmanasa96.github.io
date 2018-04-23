@@ -49,9 +49,9 @@ We have taken log for parameters to scale them down, as some playlists might hav
 
 ## Evaluation & Discussion
 
-Evaluation of a recommendation system is difficult since, the actual evaluation could only be done by asking the users if they approve of the items recommended to them. Regardless, we sampled a few incomplete playlists from the million playlist
-datasets and tried to predict the songs which we removed from the playlist. We majorly tried to focus on the precision-at-k evaluation strategy for our system. For a basic linear combination strategy, we were able to get a 20% precision-at-500. Sine, the testing set
-was sampled by using parts of the playlist already provided, we only had a limited number of songs to verify our recommendations on. It is important to note that winners of similar song recommendation competition previously held had a lower precision (in spite of having a more comprehensive song dataset).
+Evaluation of a recommendation system is difficult since, the actual evaluation could only be done by asking the users if they approve of the items recommended to them. Regardless, we sampled a few incomplete playlists from the million playlist datasets and tried to predict the songs which we removed from the playlist.
+We majorly tried to focus on the precision-at-k evaluation strategy for our system. For a basic linear combination strategy, we were able to get a 20% precision-at-500. 
+Since, the testing set was sampled by using parts of the playlist already provided, we only had a limited number of songs to verify our recommendations on. It is important to note that winners of similar song recommendation competition previously held had a lower precision (in spite of having a more comprehensive song dataset).
 We intend to try different strategies for combining the recommendations from different models to figure out an optimum split between them. Additionally, we will actively be taking part in the Spotify challenge to find how our system fares with the other teams.
 
 ## Challenges
