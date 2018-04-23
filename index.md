@@ -1,32 +1,12 @@
-## Welcome to GitHub Pages
+## Abstract
 
-You can use the [editor on GitHub](https://github.com/dmanasa96/dmanasa96.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+Recommendation is an important aspect in entertainment. Users are always looking for new content which match their taste be it movies, shows or songs. Music streaming websites have billions of songs in their database thus, it becomes difficult to find new music which the user will like.The tool we are building will be using Spotify’s version of The Million Playlist Dataset and create a model for playlist continuation i.e. it will suggest additional songs given a seed playlist. This boils down to building a recommender system which will put forward more songs for consideration based on the current playlist.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Motivation
 
-### Markdown
+Recommender systems have been proven to increase customer engagement for any commercial website that is providing any kind of products to the user be it audio, video or shopping. This is because these systems help in personalizing the experience for every user by providing
+them suggestions according to their taste and preference. This is the exact reason why we are building a recommender system for Spotify’s playlist continuation. For users who listen to songs more than the play time of their playlist, it is important to play songs that are inline with their listening preferences or they would either go to another music site or stop listening all together and either of these situations are going to create a loss for the website owner. So to increase user engagement, we want to provide relevant suggestions.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
 ### Jekyll Themes
 
