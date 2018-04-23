@@ -1,5 +1,6 @@
 # PLAY-TRACK
-# CSCE 670 :: Information Storage and Retrieval :: Texas A&M University :: Spring 2018 :: Project
+## CSCE 670 :: Information Storage and Retrieval :: Texas A&M University :: Spring 2018 :: Project
+
 
 ## Abstract
 
@@ -58,6 +59,7 @@ We faced a lot of challenges and problems while developing these models. Followi
 
 • Due to sheer amount of data, it was really hard to process the complete dataset for any of our models. To have a glimpse of the data size here are a few stats:
 Playlists: 1,000,000 Songs: 2, 200,00 Artists: 287,000 So creating any kind of data structure that would hold this data and process it was out of bounds.
+
 • The most authentic evaluation for our results could only be provided by Spotify for the challenge set however due to some technical aspects on Spotify’s website, submissions are turned off and so we had to sample test data from the provided training data to test our results.
 
 ## Conclusion & Future Work
