@@ -30,7 +30,9 @@ three different models, we combine them using a linear weighted strategy to gene
 of the three approaches:
 
 1)Song - Song Pairing: In this approach, we have mainly focused on songs that appear together in a playlist. For each song present in a playlist, we ought to get a list of songs which have appeared with this song i.e for a Song A, we have maintained a count of how often other songs have appeared with A, within all the playlists. Basing on this count, we know how often pair of songs appeared together. But as this is a million data set, we had so many songs that, storing count for each song with rest of the songs in form of a matrix is not efficient. And instead of finding count for all the songs, it is efficient to store the count for songs present in the challenge set in form of a dictionary of dictionary. The dictionary created is of form-
-
+```markdown
+{{Song A: [(count of song B appeared with song A, Song B id), (count of song C appeared with song A, Song C id),...]}, {Song B: [(count of song A appeared with song B, Song A id), (count of song C appeared with song B, Song C id),...]},{...},{..}...}
+```
 So from this dictionary, for a song P, we can know all of the K-songs appeared with it the maximum number of times.
 
 2)Artist - Artist similarity: It's a common idea that person that likes one artist will definitely like a similar artist (artist
