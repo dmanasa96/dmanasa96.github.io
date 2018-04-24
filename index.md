@@ -2,7 +2,7 @@
 ## CSCE 670 :: Information Storage and Retrieval :: Texas A&M University :: Spring 2018 :: Project
 
 
-###Kaushik Raju, Mragank Yadav, Manasa Donepudi
+### Kaushik Raju, Mragank Yadav, Manasa Donepudi
 
 ## Abstract
 
