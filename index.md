@@ -21,11 +21,11 @@ them suggestions according to their taste and preference. This is the exact reas
 
 We found several works related to playlist continuation and song recommendation which were different from each other in terms of kinds of recommendation strategy used, kind of data used and also different works had different kind of evaluation strategies their methods. Following are some related works in term of used techniques:
 
-1)Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University[2,3]. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. So quite a few number of papers used the content based similarity measure to recommend songs similar to users taste.
+1)Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University[2,3]. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. The papers used the content based similarity measure to recommend songs similar to users taste.
 
-2)User Rating Based: Some papers used the collaborative filtering techniques to suggest song recommendations to users based on their previous data. Users who had their previous preferences set and with rating scores for other songs, it made sense to suggest songs listened by other users who had similar mutual preference.
+2)Similarity Based: Collaborative filtering techniques[1] are a great method to suggest recommendations to users based on their previous data. Users who had their previous preferences set and with rating scores for other songs, it made sense to suggest songs listened by other users who had similar mutual preference.
 
-3)Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs[4] under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
+3)Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
 
 We found a lot of works where most popular songs were used as baseline models and even performed quite well in some cases. We have used collaborative filtering[1] with cosine similarity.
 
