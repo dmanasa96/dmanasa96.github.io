@@ -4,6 +4,10 @@
 
 ### Kaushik Raju, Mragank Yadav, Manasa Donepudi
 
+## [CODE](https://github.com/kaushik16/PlayTrack)
+
+## [VIDEO](https://www.youtube.com/watch?v=RgB1rVv7UxA&feature=youtu.be)
+
 ## Abstract
 
 Recommendation is an important aspect in entertainment. Users are always looking for new content which match their taste be it movies, shows or songs. Music streaming websites have billions of songs in their database thus, it becomes difficult to find new music which the user will like.The tool we are building will be using Spotify’s version of The Million Playlist Dataset and create a model for playlist continuation i.e. it will suggest additional songs given a seed playlist. This boils down to building a recommender system which will put forward more songs for consideration based on the current playlist.
