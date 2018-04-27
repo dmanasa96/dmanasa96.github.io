@@ -21,27 +21,26 @@ them suggestions according to their taste and preference. This is the exact reas
 
 We found several works related to playlist continuation and song recommendation which were different from each other in terms of kinds of recommendation strategy used, kind of data used and also different works had different kind of evaluation strategies their methods. Following are some related works in term of used techniques:
 
-1)Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University[2,3]. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. The papers used the content based similarity measure to recommend songs similar to users taste.
+1) Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University [2,3]. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. The papers used the content based similarity measure to recommend songs similar to users taste.
 
-2)Similarity Based: Collaborative filtering techniques[1] are a great method to suggest recommendations to users based on their previous data. Users who had their previous preferences set and with rating scores for other songs, it made sense to suggest songs listened by other users who had similar mutual preference.
+2) Similarity Based: Collaborative filtering techniques[1] are a great method to suggest recommendations to users based on their previous data. Users who had their previous preferences set and with rating scores for other songs, it made sense to suggest songs listened by other users who had similar mutual preference.
 
-3)Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
+3) Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
 
 We found a lot of works where most popular songs were used as baseline models and even performed quite well in some cases. We have used collaborative filtering[1] with cosine similarity.
 
 ## Approach / Methods
 
 We have developed three different models to predict songs for every playlist. Once we have song recommendations from the
-three different models, we combine them using a linear weighted strategy to generate final ranking. Here are the details
-of the three approaches:
+three different models, we combine them using a linear weighted strategy to generate final ranking. The linear weighted strategy depends on seed set in each challenge playlist. If seed set is empty/very small, to avoid cold start problem, higher weightage is given to most popular songs. And if seed set is big enough artist - artist similarity and song - song similarity are given higher preference in recommendation. Here are the details of the three approaches:
 
-1)Song - Song Pairing: In this approach, we have mainly focused on songs that appear together in a playlist. For each song present in a playlist, we ought to get a list of songs which have appeared with this song i.e for a Song A, we have maintained a count of how often other songs have appeared with A, within all the playlists. Basing on this count, we know how often pair of songs appeared together. But as this is a million data set, we had so many songs that, storing count for each song with rest of the songs in form of a matrix is not efficient. And instead of finding count for all the songs, it is efficient to store the count for songs present in the challenge set in form of a dictionary of dictionary. The dictionary created is of form-
+1) Song - Song Pairing: In this approach, we have mainly focused on songs that appear together in a playlist. For each song present in a playlist, we ought to get a list of songs which have appeared with this song i.e for a Song A, we have maintained a count of how often other songs have appeared with A, within all the playlists. Basing on this count, we know how often pair of songs appeared together. But as this is a million data set, we had so many songs that, storing count for each song with rest of the songs in form of a matrix is not efficient. And instead of finding count for all the songs, it is efficient to store the count for songs present in the challenge set in form of a dictionary of dictionary. The dictionary created is of form-
 ```markdown
 { {Song A: [(count of song B appeared with song A, Song B id), (count of song C appeared with song A, Song C id),...]}, {Song B: [(count of song A appeared with song B, Song A id), (count of song C appeared with song B, Song C id),...]}, {...}, {..}...}}
 ```
 So from this dictionary, for a song P, we can know all of the K-songs appeared with it the maximum number of times.
 
-2)Artist - Artist similarity: It's a common idea that person that likes one artist will definitely like a similar artist (artist
+2) Artist - Artist similarity: It's a common idea that person that likes one artist will definitely like a similar artist (artist
 whose songs are similar to the other). So we intended to find Artist - Artist Similarity. We used cosine similarity to find similar artists. Here we kept a note of all the artists occurring in each playlist, i.e for each artist, we represent him as a vector of all the playlist. If a artist appears 'a' number of times in a playlist, corresponding entry with respect to playlist is 'a'. We represented all these vectors in dictionary of dictionary format and converted it to sparse matrix . Then we used cosine similarity to obtain first 10
 nearest neighbors of a artist.
 
@@ -52,7 +51,7 @@ Example: We found top 10 artists similar to 'Miley Cyrus' which returned us, 'Ha
 Song Score Formulae = 0.5*(log(followers for that song over all playlists/total number of followers)) +
 0.5*(log(number of playlists song appeared in/total number of playlists))
 
-We have taken log for parameters to scale them down, as some playlists might have many followers while some might have only few followers (Similar to IDF) And we have also scaled down by taking log playlists ratio, to keep it compatible with followers ratio and have given equal priority to both ratios. We used heaps for sorting on score and storing top 1000 songs, instead of storing complete list for computational purposes.
+We have taken log for parameters to scale them down, as some playlists might have many followers while some might have only few followers (Similar to IDF) And we have also scaled down by taking log playlists ratio, to keep it compatible with followers ratio and have given weightage to both ratios. We used heaps for sorting on score and storing top 1000 songs, instead of storing complete list for computational purposes.
 
 ## Evaluation & Discussion
 
