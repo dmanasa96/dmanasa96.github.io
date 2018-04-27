@@ -75,3 +75,7 @@ Playlists: 1,000,000 Songs: 2, 200,00 Artists: 287,000 So creating any kind of d
 ## Conclusion & Future Work
 
 As we previously discussed the importance of recommender systems, this project provides a substantial proof of it. Spotify realized the importance of recommender systems in their business model and hence are conducting this challenge. Also our learning curve in this project has been pretty good since we got a chance to work on real world dataset which was both huge and demanded decent efforts in terms of time and complexity. We think that this model can be improved by using certain more aspects of the data like song rakings, playlist title and song titles. We think that using topic modeling and initial ranking of songs, we can provide better recommendations with more genuine rankings. Also we are currently using a linear weightage to combine these models and a rigorously tested voting mechanism could work better for this model. Apart from these future works, we think that the Information Retrieval class helped us tremendously in getting an understanding of these recommender system which helped us come up with a model of ourselves for this task.
+
+## References
+
+1) Yehuda Koren. 2008. Factorization meets the neighborhood: a multifaceted collaborative filtering model. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '08). ACM, New York, NY, USA, 426-434. DOI: https://doi.org/10.1145/1401890.1401944
