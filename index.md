@@ -21,13 +21,13 @@ them suggestions according to their taste and preference. This is the exact reas
 
 We found several works related to playlist continuation and song recommendation which were different from each other in terms of kinds of recommendation strategy used, kind of data used and also different works had different kind of evaluation strategies their methods. Following are some related works in term of used techniques:
 
-1)Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. So quite a few number of papers used the content based similarity measure to recommend songs similar to users taste.
+1)Content-Based Suggestions: A lot of works used the Million Song Dataset released by Columbia University[2,3]. This dataset had audio analysis features for every song thus making it easier to recommend similar songs based on content. So quite a few number of papers used the content based similarity measure to recommend songs similar to users taste.
 
 2)User Rating Based: Some papers used the collaborative filtering techniques to suggest song recommendations to users based on their previous data. Users who had their previous preferences set and with rating scores for other songs, it made sense to suggest songs listened by other users who had similar mutual preference.
 
-3)Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
+3)Playlist and Song Title Based: We also found interesting work where songs for a playlist were suggested based on the title of the songs and the playlist. The paper used topic modeling to cluster songs[4] under different topics and then used playlist titles to suggest similar song clusters for that particular playlist.
 
-We found a lot of works where most popular songs were used as baseline models and even performed quite well in some cases.
+We found a lot of works where most popular songs were used as baseline models and even performed quite well in some cases. We have used collaborative filtering[1] with cosine similarity.
 
 ## Approach / Methods
 
@@ -78,4 +78,8 @@ As we previously discussed the importance of recommender systems, this project p
 
 ## References
 
-1) Yehuda Koren. 2008. Factorization meets the neighborhood: a multifaceted collaborative filtering model. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '08). ACM, New York, NY, USA, 426-434. DOI: https://doi.org/10.1145/1401890.1401944
+1) Yehuda Koren. 2008. Factorization meets the neighborhood: a multifaceted collaborative filtering model. In Proceedings of the 14th ACM SIGKDD international conference on Knowledge discovery and data mining (KDD '08). ACM, New York, NY, USA, 426-434. [DOI](https://doi.org/10.1145/1401890.1401944)
+
+2)The Million Song Dataset, T. Bertin-Mahieux, D. Ellis, B. Whitman and P. Lamere, ISMIR '11 [Reference](http://ismir2011.ismir.net/papers/OS6-1.pdf)
+
+3)The Million Song Dataset Challenge, B. McFee, T. Bertin-Mahieux, D. Ellis and G. Lanckriet, AdMIRe '12 [Reference](https://www.ee.columbia.edu/~dpwe/pubs/McFeeBEL12-MSDC.pdf)
