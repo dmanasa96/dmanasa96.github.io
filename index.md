@@ -48,11 +48,11 @@ Example: We found top 10 artists similar to 'Miley Cyrus' which returned us, 'Ha
 Song Score Formulae = 0.5*(log(followers for that song over all playlists/total number of followers)) +
 0.5*(log(number of playlists song appeared in/total number of playlists))
 
-We have taken log for parameters to scale them down, as some playlists might have many followers while some might have only few followers (Similar to IDF) And we have also scaled down by taking log playlists ratio, to keep it compatible with followers ratio and have given equal priority to both ratios. We used heaps for sorting on score and storing top 1000 songs, instead of storing complete list.
+We have taken log for parameters to scale them down, as some playlists might have many followers while some might have only few followers (Similar to IDF) And we have also scaled down by taking log playlists ratio, to keep it compatible with followers ratio and have given equal priority to both ratios. We used heaps for sorting on score and storing top 1000 songs, instead of storing complete list for computational purposes.
 
 ## Evaluation & Discussion
 
-Evaluation of a recommendation system is difficult since, the actual evaluation could only be done by asking the users if they approve of the items recommended to them. Regardless, we sampled a few incomplete playlists from the million playlist challenge dataset and tried to predict the songs which we removed from the playlist, i.e. In challenge data-set, we have considered playlists which have 100 songs/more and took first 30 songs as seed and predicted the rest of the songs in the playlist and evaluated using precision at k.
+We have trained our algorithm over complete million dataset. Evaluation of this recommendation system is difficult since, the actual evaluation could only be done by asking the users if they approve of the items recommended to them. Regardless, we sampled a few incomplete playlists from the million playlist challenge dataset and tried to predict the songs which we removed from the playlist, i.e. In challenge data-set, we have considered playlists which have 100 songs/more and took first 30 songs as seed and predicted the rest of the songs in the playlist and evaluated using precision at k.
 
 We majorly tried to focus on the precision-at-k evaluation strategy for our system. For a basic linear combination strategy, we were able to get a 20% precision-at-500. 
 
